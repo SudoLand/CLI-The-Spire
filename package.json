@@ -1,0 +1,40 @@
+{
+  "name": "cli-the-spire",
+  "version": "1.0.0",
+  "description": ":fire: CLI tool for slay the spire",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SudoLand/CLI-The-Spire.git"
+  },
+  "keywords": [
+    "slay-the-spire"
+  ],
+  "author": "WMXPY",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SudoLand/CLI-The-Spire/issues"
+  },
+  "homepage": "https://github.com/SudoLand/CLI-The-Spire#readme",
+  "dependencies": {
+    "@sudoo/coco": "^1.8.5",
+    "@sudoo/io": "^1.8.0"
+  },
+  "devDependencies": {
+    "@sudoo/triforce": "^2.7.11"
+  },
+  "nyc": {
+    "extension": [
+      ".ts"
+    ],
+    "include": [
+      "src/**/*.ts"
+    ],
+    "instrument": true,
+    "reporter": [
+      "json",
+      "text-summary"
+    ],
+    "report-dir": "coverage",
+    "sourceMap": true
+  }
+}
