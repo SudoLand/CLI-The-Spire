@@ -19,7 +19,7 @@ const appPackage: any = {
     name: parent.name,
     main: "index.js",
     bin: {
-        version: "bin",
+        spire: "bin",
     },
     version: parent.version,
     description: parent.description,
