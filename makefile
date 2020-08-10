@@ -14,6 +14,14 @@ dev:
 	@echo "[INFO] Building for development"
 	@NODE_ENV=development $(tsc) --p $(dev)
 
+example-chmod: dev
+	@echo "[INFO] Giving Permission"
+	@chmod +x ./app/bin
+
+example-run: example-chmod
+	@echo "[INFO] Running Example $(FILE)"
+	@./app/bin $(FILE)
+
 build:
 	@echo "[INFO] Building for production"
 	@NODE_ENV=production $(tsc) --p $(build)
