@@ -10,10 +10,9 @@ import { decryptSaveFile, encryptSaveFile, SaveFile } from "slay-the-spire";
 import { waitForKeyPress } from "./input";
 import { openFile } from "./open";
 
-(async () => {
+export const execute = async (args: string[]): Promise<void> => {
 
-    const argv: string[] = process.argv;
-    const fileName: string = argv[2];
+    const fileName: string = args[2];
     if (!fileName) {
         console.log('Provide File');
         process.exit();
@@ -62,4 +61,4 @@ import { openFile } from "./open";
 
     console.log('DONE!');
     process.exit();
-})();
+};
