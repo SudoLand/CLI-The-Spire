@@ -17,7 +17,8 @@
   "homepage": "https://github.com/SudoLand/CLI-The-Spire#readme",
   "dependencies": {
     "@sudoo/coco": "^1.8.5",
-    "@sudoo/io": "^1.8.0"
+    "@sudoo/io": "^1.8.0",
+    "slay-the-spire": "^0.0.0"
   },
   "devDependencies": {
     "@sudoo/triforce": "^2.7.11"
