@@ -8,6 +8,7 @@ import { attemptMarkDir, readTextFile, removeFile, writeTextFile } from "@sudoo/
 import * as Path from "path";
 import { decryptSaveFile, encryptSaveFile, SaveFile } from "slay-the-spire";
 import { waitForKeyPress } from "./input";
+import { openFile } from "./open";
 
 (async () => {
 
@@ -39,6 +40,7 @@ import { waitForKeyPress } from "./input";
 
     const tempJsonLocation: string = Path.join(tempFolderPath, 'temp.json');
     await writeTextFile(tempJsonLocation, JSON.stringify(decrypted, null, 2));
+    await openFile(tempJsonLocation);
 
     console.log(`BACKUP AT --- <${backupLocation}>`);
     console.log(`EDITING ----- <${tempJsonLocation}>`);
