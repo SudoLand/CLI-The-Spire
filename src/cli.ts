@@ -5,10 +5,9 @@
  */
 
 import { attemptMarkDir, readTextFile, removeFile, writeTextFile } from "@sudoo/io";
+import { openFile, waitForKeyPress } from "@sudoo/shell";
 import * as Path from "path";
 import { decryptSaveFile, encryptSaveFile, SaveFile } from "slay-the-spire";
-import { waitForKeyPress } from "./input";
-import { openFile } from "./open";
 
 export const execute = async (args: string[]): Promise<void> => {
 
@@ -46,7 +45,9 @@ export const execute = async (args: string[]): Promise<void> => {
     console.log('Press any key to continue...');
     console.log('Press <ESC> to cancel...');
 
-    const shouldContinue: boolean = await waitForKeyPress();
+    const shouldContinue: boolean = await waitForKeyPress({
+        cancelKeys: ['escape'],
+    });
     if (!shouldContinue) {
         console.log('ABANDONED!');
         process.exit();
