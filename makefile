@@ -20,7 +20,7 @@ example-chmod: dev
 
 example-run: example-chmod
 	@echo "[INFO] Running Example $(FILE)"
-	@./app/bin $(FILE)
+	@./app/bin edit $(FILE)
 
 build:
 	@echo "[INFO] Building for production"

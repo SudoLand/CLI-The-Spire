@@ -22,3 +22,8 @@ coco.command(Command.create('edit')
         await editAndUpdateSaveFile(path);
     }),
 );
+
+export const execute = async (args: string[]): Promise<void> => {
+
+    await coco.go(args);
+};
